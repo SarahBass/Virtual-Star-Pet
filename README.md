@@ -7,12 +7,19 @@ UNDER CONSTRUCTION
 Raise a Virtual Pet when you get your daily steps!
 
 Features:
+
 Multiple pets to earn every 10,000 steps
+
 Earn 1 action every 100 steps
+
 Pet Emotions: Sad, Happy, Sick, Angry
+
 Baby pet evolves after 10 Food
+
 Multiple colors of pets
+
 Pets have Toys, food, education games, and hygene animations
+
 Mutiple Backgrounds to match pet
 
 <img src="https://github.com/SarahBass/Virtual-Star-Pet/blob/main/promoart/Virtualpetexamples%202.png" width="300" height="300">
