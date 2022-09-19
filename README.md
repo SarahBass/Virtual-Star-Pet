@@ -22,6 +22,12 @@ Pets have Toys, food, education games, and hygene animations
 
 Mutiple Backgrounds to match pet
 
+<img src="https://github.com/SarahBass/Virtual-Star-Pet/blob/main/promoart/Virtualpetexamples%208.png" width="300" height="300">
+
+<img src="https://github.com/SarahBass/Virtual-Star-Pet/blob/main/promoart/Virtualpetexamples%209.png" width="300" height="300">
+
+<img src="https://github.com/SarahBass/Virtual-Star-Pet/blob/main/promoart/Virtualpetexamples%2010.png" width="300" height="300">
+
 <img src="https://github.com/SarahBass/Virtual-Star-Pet/blob/main/promoart/Virtualpetexamples%202.png" width="300" height="300">
 
 <img src="https://github.com/SarahBass/Virtual-Star-Pet/blob/main/promoart/Virtualpetexamples%203.png" width="300" height="300">
