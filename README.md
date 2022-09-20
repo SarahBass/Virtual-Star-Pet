@@ -48,3 +48,26 @@ Play Games to Educate Pet
 
 <img src="https://github.com/SarahBass/Virtual-Star-Pet/blob/main/promoart/Virtualpetexamples%207.png" width="300" height="300">
 
+## Contents:
+
+<img src="https://github.com/SarahBass/WearOS-Animated-Star-Watch/blob/main/SamplePngforGITHUBONLY/logoStarWatchOS.jpeg" width="300" height="150">
+
+[NOT A FULL PACKAGE - ONLY CONTAINS CODE SNIPPETS TO PROTECT CREATOR AND ARTIST PROPERTY]
+
+Contents | Description
+-------- | ----------
+[AndroidManifest.xml](https://github.com/SarahBass/Virtual-Star-Pet/blob/main/java/manifests/AndroidManifest.xml) | Code Includes Permissions for Location/Sensors
+[MainActivity.kt](https://github.com/SarahBass/Virtual-Star-Pet/blob/main/java/com.academy.virtualstarpet/MainActivity.kt) | Kotlin/Java Code for Changing Background, using animations, keeping score, structuring game, changing XML elements
+[MainActivityUtils.kt] | Unit Test Utils
+[MainActivityTest.kt] | Unit Test Backgrounds and Dates 
+[Animated.xml](https://github.com/SarahBass/Virtual-Star-Pet/blob/main/res/drawable/cowhappy.xml) | Animations
+[activity_main.xml](https://github.com/SarahBass/Virtual-Star-Pet/blob/main/res/layout/activity_main.xml)      | Used to layout objects
+[PNG Files]    | No Drawables or APP Art is included on Github
+
+## Connect Device with Android Debug Bridge :
+
+> Terminal Command: adb devices
+
+> Terminal Command : adb forward tcp:[#### localhost number] localabstract:/adb-hub
+
+> Terminal Command : adb connect localhost: [#### localhost number] 
