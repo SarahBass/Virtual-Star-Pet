@@ -1,17 +1,10 @@
 package com.academy.virtualstarpet
+import android.animation.AnimatorSet
 import android.app.Activity
-import android.animation.Animator
-import android.graphics.*
 import android.graphics.drawable.AnimationDrawable
-import android.view.animation.AnimationUtils
-import android.view.animation.Animation
-import android.view.animation.TranslateAnimation
-import android.hardware.Sensor
-import android.hardware.SensorEvent
-import android.hardware.SensorEventListener
-import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import com.academy.virtualstarpet.databinding.ActivityMainBinding
@@ -54,6 +47,7 @@ class SensorActivity : Activity(), SensorEventListener {
 class MainActivity : Activity() {
 
     private lateinit var binding: ActivityMainBinding
+   //Set up Time Variables to be used in Program
     val sdf = SimpleDateFormat("EEE")
     val sdf1 = SimpleDateFormat("EEEE")
     val sdf2 = SimpleDateFormat("MMMM")
@@ -61,6 +55,9 @@ class MainActivity : Activity() {
     val sdf4 = SimpleDateFormat("yyyy")
     val sdf5 = SimpleDateFormat("MMMM d , yyyy")
     val sdf6 = SimpleDateFormat("h : m a" )
+    val sdf7 = SimpleDateFormat("m" )
+    val sdf8 = SimpleDateFormat("s" )
+    val sdf9 = SimpleDateFormat("S" )
     val d = Date()
     val dayOfTheWeek: String = sdf.format(d)
     val dayOfTheWeekLong: String = sdf1.format(d)
@@ -69,8 +66,15 @@ class MainActivity : Activity() {
     val year4digits: String = sdf4.format(d)
     val fullDateSpaces: String = sdf5.format(d)
     val time12hour: String = sdf6.format(d)
+    val minutes: String = sdf7.format(d)
+    val seconds: String = sdf8.format(d)
+    val miliseconds: String = sdf9.format(d)
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //Create Text Variables-------------------------------------
         //LAYOUT CONSTRAINT:
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -85,19 +89,44 @@ class MainActivity : Activity() {
         val dayTextView = findViewById<View>(R.id.day) as TextView
         timeTextView.setText(dayOfTheWeekLong)
         //STEPS FORMAT TIME
-      //  val stepTextView = findViewById<View>(R.id.steps) as TextView
-       // timeTextView.setText((stepCount).toInt())
+         //  val stepTextView = findViewById<View>(R.id.steps) as TextView
+         // timeTextView.setText((stepCount).toInt())
+         //------------------------------------------------------
+        //foodeaten
 
-        //SET ANIMATION
-        val img = findViewById<View>(R.id.Starpet) as ImageView
-        img.setBackgroundResource(R.drawable.cowhearts)
-        val frameAnimation = img.background as AnimationDrawable
-        frameAnimation.start()
 
-        val img2 = findViewById<View>(R.id.StarObject) as ImageView
-        val animation = AnimationUtils.loadAnimation(this, R.anim.bouncing)
-        img2.startAnimation(animation)
 
+        //Create Animation Functions----------------------------------------------
+         fun foodAnimation() {
+            //SET ANIMATION for Eating uses two types of animations and 2 objects
+            //Cow wave happy anim - food bounce trans- food eat anim - cow trans bigger
+
+            //group1
+
+            //Cow waves
+            val img = findViewById<View>(R.id.Starpet) as ImageView
+            img.setBackgroundResource(R.drawable.cowhearts)
+            val cowCatchframeAnimation = img.background as AnimationDrawable
+            cowCatchframeAnimation.start()
+            //Food jumps over
+            val img2 = findViewById<View>(R.id.StarObject) as ImageView
+            img2.setBackgroundResource(R.drawable.healthy0)
+            val bouncingAnimation = AnimationUtils.loadAnimation(this, R.anim.bouncing)
+            img2.startAnimation(bouncingAnimation)
+
+            //group2
+
+            //Star blinks
+            val img4 = findViewById<View>(R.id.Starpet) as ImageView
+            img4.setBackgroundResource(R.drawable.cowjump2)
+            val growingAnimation = AnimationUtils.loadAnimation(this, R.anim.blinkingstar)
+            img4.startAnimation(growingAnimation)
+            //Food turns to Level UP
+            val img3 = findViewById<View>(R.id.StarObject) as ImageView
+            img3.setBackgroundResource(R.drawable.healthy0eating)
+            val healthy0Animation = img3.background as AnimationDrawable
+            healthy0Animation.start()
+        }
 }
 
 
