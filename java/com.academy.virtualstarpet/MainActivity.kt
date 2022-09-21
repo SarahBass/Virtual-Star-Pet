@@ -1,41 +1,29 @@
 package com.academy.virtualstarpet
 import android.app.Activity
-import android.content.Context.SENSOR_SERVICE
-import android.content.Intent
 import android.graphics.*
+import android.graphics.drawable.AnimationDrawable
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
 import android.os.Bundle
-import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.getSystemService
 import com.academy.virtualstarpet.databinding.ActivityMainBinding
 import java.text.SimpleDateFormat
 import java.util.*
 
-/**
- * Updates rate in milliseconds for interactive mode. We update once a second to advance the
- * second hand.
- */
 private const val INTERACTIVE_UPDATE_RATE_MS = 600
-
-/**
- * Handler message id for updating the time periodically in interactive mode.
- */
-private const val MSG_UPDATE_TIME = 0
-private const val HOUR_STROKE_WIDTH =  12f
-private const val MINUTE_STROKE_WIDTH = 10f
-private const val SECOND_TICK_STROKE_WIDTH = 5f
-private const val CENTER_GAP_AND_CIRCLE_RADIUS = 4f
-private const val SHADOW_RADIUS = 7f
-
 private var heartRate: Float = 0f
 private var stepCount: Float = 0f
 
+
+
+
+
+
+/*
 class SensorActivity : Activity(), SensorEventListener {
     private val mSensorManager: SensorManager
     private val mAccelerometer: Sensor
@@ -57,7 +45,7 @@ class SensorActivity : Activity(), SensorEventListener {
         mAccelerometer = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
     }
 }
-
+*/
 
 class MainActivity : Activity() {
 
@@ -93,31 +81,18 @@ class MainActivity : Activity() {
         val dayTextView = findViewById<View>(R.id.day) as TextView
         timeTextView.setText(dayOfTheWeekLong)
         //STEPS FORMAT TIME
-        val stepTextView = findViewById<View>(R.id.steps) as TextView
-        timeTextView.setText((stepCount).toInt())
+      //  val stepTextView = findViewById<View>(R.id.steps) as TextView
+       // timeTextView.setText((stepCount).toInt())
 
+        //SET ANIMATION
+        val img = findViewById<View>(R.id.Starpet) as ImageView
+        img.setBackgroundResource(R.drawable.cowhappy)
+        val frameAnimation = img.background as AnimationDrawable
+        frameAnimation.start()
 
 }
 
 
-  fun onSensorChanged(event: SensorEvent?) {
-        val mSensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
-
-        if (event?.sensor == mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE)) {
-            event?.values?.get(0)?.let {
-                heartRate = it
-            }
-        }
-
-        if (event?.sensor == mSensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)) {
-            event?.values?.get(0)?.let {
-                stepCount = it
-            }
-        }
-    }
-
-    fun onAccuracyChanged(event: Sensor?, p1: Int) {
-    }
 }
 
 
