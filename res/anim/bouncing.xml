@@ -4,13 +4,32 @@
     android:interpolator="@android:anim/linear_interpolator"
     android:fillAfter="true">
     <translate
-        android:fromYDelta="-2"
-        android:toYDelta="2%"
-        android:duration="500" />
+        android:fromYDelta="-3"
+        android:toYDelta="3%"
+        android:duration="200"
+        android:repeatMode="reverse"
+        android:repeatCount="25"/>
     <translate
-        android:startOffset="2"
-        android:fromYDelta="0%"
-        android:toYDelta="-2%"
-        android:duration="1000" />
+        android:startOffset="10"
+        android:fromYDelta="-2%"
+        android:toYDelta="0%"
+        android:duration="300"
+        android:repeatMode="reverse"
+        android:repeatCount="27"/>
+
+    <scale
+        android:fromXScale="10"
+        android:toXScale="1.0"
+        android:fromYScale="10"
+        android:toYScale="1.0"
+        android:pivotX="50%p"
+        android:pivotY="50%p"
+        android:duration="3000"/>
+
+
+
+
+
+
 
 </set>
