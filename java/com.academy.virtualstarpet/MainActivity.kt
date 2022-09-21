@@ -1,7 +1,11 @@
 package com.academy.virtualstarpet
 import android.app.Activity
+import android.animation.Animator
 import android.graphics.*
 import android.graphics.drawable.AnimationDrawable
+import android.view.animation.AnimationUtils
+import android.view.animation.Animation
+import android.view.animation.TranslateAnimation
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -86,9 +90,13 @@ class MainActivity : Activity() {
 
         //SET ANIMATION
         val img = findViewById<View>(R.id.Starpet) as ImageView
-        img.setBackgroundResource(R.drawable.cowhappy)
+        img.setBackgroundResource(R.drawable.cowhearts)
         val frameAnimation = img.background as AnimationDrawable
         frameAnimation.start()
+
+        val img2 = findViewById<View>(R.id.StarObject) as ImageView
+        val animation = AnimationUtils.loadAnimation(this, R.anim.bouncing)
+        img2.startAnimation(animation)
 
 }
 
