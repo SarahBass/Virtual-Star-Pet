@@ -9,9 +9,10 @@
     tools:deviceIds="wear">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="@drawable/feildbg"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/feildbg"
+        android:visibility="visible">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -19,49 +20,51 @@
         android:id="@+id/Starpet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/milkcow"
-        android:contentDescription="TODO" />
+        android:contentDescription="TODO"
+        android:visibility="visible" />
 
     <ImageView
         android:id="@+id/StarObject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/toy1" />
+        android:src="@drawable/toy0"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily ="@font/fishland"
-        android:textSize="10dp"
-        android:textColor="#FFFFFF"
+        android:fontFamily="@font/fishland"
         android:text="date"
+        android:textColor="#FFFFFF"
+        android:textSize="10dp"
 
-        />
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:fontFamily="@font/fishland"
-        android:text="12:45"
-        android:textColor="#FFFFFF"
+        android:gravity="center"
         android:shadowColor="#000000"
-        android:shadowRadius="2"
         android:shadowDx="10"
         android:shadowDy="5"
+        android:shadowRadius="2"
+        android:text="12:45"
+        android:textColor="#FFFFFF"
         android:textSize="40dp"
-        android:visibility="visible" />
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/steps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily ="@font/fishland"
-        android:textSize="10dp"
+        android:fontFamily="@font/fishland"
+        android:text="steps"
         android:textColor="#FFFFFF"
-        android:text="steps" />
+        android:textSize="10dp"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/day"
