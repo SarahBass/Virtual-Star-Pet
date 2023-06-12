@@ -50,7 +50,7 @@ Play Games to Educate Pet
 
 ## Contents:
 
-<img src="https://github.com/SarahBass/Virtual-Star-Pet/blob/main/promoart/githubvirtualpet.jpeg" width="300" height="150">
+<img src="https://github.com/SarahBass/Virtual-Star-Pet/blob/main/promoart/VPEducatelogo.png" width="300" height="150">
 
 [NOT A FULL PACKAGE - ONLY CONTAINS CODE SNIPPETS TO PROTECT CREATOR AND ARTIST PROPERTY]
 
